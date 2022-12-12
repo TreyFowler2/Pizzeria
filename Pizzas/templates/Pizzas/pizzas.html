@@ -1,0 +1,21 @@
+{% extends "Pizzas/base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1><p>Pizzeria's Pizzas</p></h1>
+
+<ul>
+    {% for pizza in all_pizzas %}
+
+    <li> 
+        <a href="{% url 'Pizzas:pizza' pizza.id %}"> {{ pizza }}</a>
+    </li>
+
+    {% empty %}
+    <li> No pizzas have been added yet! </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

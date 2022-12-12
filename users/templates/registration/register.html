@@ -1,4 +1,4 @@
-{% extends "FeedApp/base.html" %}
+{% extends "Pizzas/base.html" %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
 
     <button name="submit">Register</button>
     <input type="hidden" name="next" 
-    value="{% url 'FeedApp:index' %}" />
+    value="{% url 'Pizzas:index' %}" />
   </form>
 
 {% endblock content %}

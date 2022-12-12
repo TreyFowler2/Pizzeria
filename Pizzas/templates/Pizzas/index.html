@@ -1,0 +1,17 @@
+{% extends "Pizzas/base.html" %}
+
+{% block page_header %}
+    <div class="jumbotron bg-danger">
+       <h1 class="display-3">Pizzeria's World Class Pizzas</h1>
+            <p class="lead">Dine in, order out, or get it delivered!
+            </p>
+
+            <a class="btn btn-lg btn-outline-primary" href="{% url 'users:register' %}"
+            role="button">Create a Pizzeria Account &raquo;</a>
+    </div>
+            
+    <body>
+        <img alt="Pizza" src="https://media.istockphoto.com/id/610015020/vector/facade-pizzeria-with-a-signboard-awning-and-symbol-on-windows.jpg?s=612x612&w=0&k=20&c=7gmNh5I9Ubc86zf_-nwreyzrf25xGO-NsyiU90ihzpk=">
+    </body>
+
+{% endblock page_header %}

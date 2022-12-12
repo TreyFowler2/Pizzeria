@@ -1,0 +1,29 @@
+{% extends "Pizzas/base.html" %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<p> Pizza: {{ pizza }}</p>
+</table>
+
+    {% if uploads %}
+    <img src="{{uploads.url}}" class="img.thumbnail" style="max-height:300px" alt="">
+    {% endif %}
+
+</table>    
+
+<ul>
+    {% for t in toppings %}
+
+    <li> {{ t.topping_name }} </li>
+
+    {% empty %}
+    <li> No toppings have been added yet for this pizza! </li>
+    {% endfor %}
+
+</ul>
+
+<a href="{% url 'Pizzas:comments' pizza.id %}">Add or view comments!</a>
+
+{% endblock content %}

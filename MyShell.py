@@ -1,10 +1,10 @@
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "FeedProject.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PizzeriaProject.settings")
 
 import django
 django.setup()
 
-from FeedApp.models import Profile,Relationship
+from Pizzas.models import Profile
 
 '''
 to install from requirements.txt
@@ -17,4 +17,4 @@ friends = profile.friends.all()
 friends_profiles = Profile.objects.filter(user__in=friends)
 
 friends = Profile.objects.values('friends')
-posts = Post.objects.filter(username__in=friends).order_by('-date_posted')
+#posts = Post.objects.filter(username__in=friends).order_by('-date_posted')
